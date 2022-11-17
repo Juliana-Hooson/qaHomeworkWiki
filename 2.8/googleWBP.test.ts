@@ -5,9 +5,9 @@ const google = new Google()
 
 test('do a search', async () => {
     await google.navigate()
-    await google.search('Chicago Bears')
+    await google.search('Sour Punch Straws')
     let text = await google.getResults()
-    expect(text).toContain('Chicago Bears')
+    expect(text).toContain('Sour Punch Straws')
     await fs.writeFile(`${__dirname}/google.png`,
      await google.driver.takeScreenshot(), "base64",
      (e) => {
